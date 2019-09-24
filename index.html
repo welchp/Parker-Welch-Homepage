@@ -37,8 +37,10 @@
         
         #main-grid {
             display:grid;
-            grid-template-rows: 90px 1fr;
+            grid-template-rows: 70px auto;
             align-items: center;
+            height:100%;
+            width:100%;
         }
         
         #main-header {
@@ -47,40 +49,73 @@
             align-items: center;
             background-color: black;
             color:white;
-            padding:10px;
+            height:100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
         }
         
         #main-content {
             display:flex;
-            flex-direction: column;
             height:100%;
             width:100%;
         }
         
+        #side-nav {
+            display:flex;
+            flex-direction: column;
+            width:300px;
+            padding:6px;
+            background-color: rgba(0,0,0,0.2);
+            color:gray;
+        }
+        
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:45px;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+            background-color: white;
+            border-radius:6px;
+            margin:10px;
+        }
+        
+        .section:hover {
+            display:flex;
+            cursor:pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: scale(1.02);
+        }
+        
         #content-wrapper {
-            margin:auto auto;
-            max-width:1080px;
+            display:grid;
+            grid-template-rows: 1fr 3fr;
+            margin:auto;
+            height:100%;
             width:100%;
-            padding:10px;
+            grid-gap:10px;
         }
         
         #section-header {
             padding:10px;
             display:flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            background-color: #ededed;
+            background-color: rgba(0,0,0,0.8);
             color:gray;
-            height:45px;
             width:100%;
+            height:100%;
+            font-size:38px;
+            font-weight:100;
         }
         
         #projects {
             display:grid;
-            grid-template-columns: 350px 350px 350px;
-            grid-template-rows: 350px 350px 350px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap:10px;
             justify-content: center;
-            width:100%
+            width:100%;
+            padding:0 10px 10px 10px;
         }
         
         .project-card {
@@ -88,15 +123,14 @@
             margin:auto;
             justify-content: center;
             align-items: center;
-            border: 1px solid #ededed;
+            height:100%;
+            width:100%;
+            border: 1px solid rgba(0,0,0,0.2);
             border-radius: 4px;
-            width:300px;
-            height:300px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             font-size: 80px;
             font-weight: 800;
             color:rgba(0,0,0,0.2);
-            
         }
         
     </style>
@@ -111,6 +145,13 @@
             <h1>parkerwelch.info</h1>
         </header>
         <div id="main-content">
+            <div id="side-nav">
+                <div class="section">Section 1</div>
+                <div class="section">Section 2</div>
+                <div class="section">Section 3</div>
+                <div class="section">Section 4</div>
+                <div class="section">Section 5</div>
+            </div>
             <div id="content-wrapper">
                 <header id="section-header">
                     <h4>Projects</h4>
