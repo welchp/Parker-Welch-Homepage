@@ -27,6 +27,10 @@
             box-sizing: border-box
         }
         
+        a {
+            text-decoration: none;
+        }
+        
         html,body {
             margin:0;
             padding:0;
@@ -88,7 +92,7 @@
         
         #content-wrapper {
             display:grid;
-            grid-template-rows: 1fr 3fr;
+            grid-template-rows: 90px 3fr;
             margin:auto;
             height:100%;
             width:100%;
@@ -121,7 +125,7 @@
         .project-card {
             display: flex;
             margin:auto;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             height:100%;
             width:100%;
@@ -132,11 +136,26 @@
             font-weight: 800;
             color:rgba(0,0,0,0.2);
             flex-wrap: wrap;
+            overflow:hidden;
         }
         
         .pixel {
-            width:4px;
-            height:4px;
+            width:8px;
+            height:8px;
+        }
+        
+        .flex-height {
+        }
+        
+        #text {
+            position:absolute;
+            bottom:50px;
+            left:60px;
+            color:white;
+            font-weight: 800;
+            font-size:16px;
+            background-color:rgba(0,0,0,0.9);
+            padding:4px;
         }
         
     </style>
@@ -148,35 +167,101 @@
 <body>
     <div id="main-grid">
         <header id="main-header">
-            <h1>parkerwelch.info</h1>
+            <h1 style="margin-left:20px">parkerwelch.info</h1>
         </header>
         <div id="main-content">
             <div id="side-nav">
-                <div class="section">Section 1</div>
-                <div class="section">Section 2</div>
-                <div class="section">Section 3</div>
-                <div class="section">Section 4</div>
-                <div class="section">Section 5</div>
+                <div class="section"></div>
+                <div class="section"></div>
+                <div class="section"></div>
+                <div class="section"></div>
+                <div class="section"></div>
             </div>
             <div id="content-wrapper">
                 <header id="section-header">
-                    <h4>Projects</h4>
+                    <h4></h4>
                 </header>
                 <div id="projects">
-                    <div class="project-card"></div>
-                    <div class="project-card">2</div>
-                    <div class="project-card">3</div>
-                    <div class="project-card">4</div>
-                    <div class="project-card">5</div>
-                    <div class="project-card">6</div>
-                    <div class="project-card">7</div>
-                    <div class="project-card">8</div>
-                    <div class="project-card">9</div>
+                    <a href="/pixels/"><div class="project-card flex-height"></div></a>
+                    <div class="project-card flex-height"></div>
+                    <div class="project-card flex-height"></div>
+                    <div class="project-card flex-height"></div>
+                    <div class="project-card flex-height"></div>
+                    <div class="project-card flex-height"></div>
+                    <div class="project-card flex-height"></div>
+                    <div class="project-card flex-height"></div>
+                    <div class="project-card flex-height"></div>
                 </div>
             </div>
         </div>
     </div>
 
 
-<script src='js/main.js'></script>
+<script>
+    
+    const one = document.querySelectorAll('.project-card')[0] 
+    let flex_heights;
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        function makeColor() {
+            const r = Math.floor(Math.random() * 255)
+            const g = Math.floor(Math.random() * 255)
+            const b = Math.floor(Math.random() * 255)
+            const rgb = [r, g, b]
+
+            return rgb
+        }
+        
+        function buildPixels() {
+            
+                one.innerHTML = "";
+            
+                //var text = document.createElement('div');
+                //text.setAttribute('id', 'text');
+                //var a = document.createElement('a');
+                //a.href = "/pixels"
+                //a.textContent = "PIXELS"
+                //text.appendChild(a)
+                //one.appendChild(text)
+
+                const width = one.offsetWidth
+                const height = one.offsetHeight
+
+                const product = Math.floor(width/8 * height/8 + 1)
+                console.log(width*height/16)
+                console.log(product)
+
+                for (let i = 0; i < product; i++) {
+                    let div = document.createElement('div')
+                    div.className = 'pixel'
+                    let color = makeColor()
+                    let rgb = `rgb(${color[0]},${color[1]},${color[2]})`;
+                    div.style.backgroundColor = rgb
+                    one.appendChild(div)
+                }
+
+                flex_heights = document.querySelectorAll('.flex-height')
+                for (let i = 0; i < flex_heights.length; i++) {
+                    flex_heights[i].style.maxHeight = height - 10 + "px"
+                    flex_heights[i].style.maxWidth = width - 10 + "px"
+                    console.log(': max-height & max-width set')
+                }
+        }
+        
+        function clearCSS() {
+            for (let i = 0; i < flex_heights.length; i++) {
+                    flex_heights[i].style.maxHeight = ""
+                    flex_heights[i].style.maxWidth = ""
+                    console.log(': max-height & max-width set')
+                }
+        }
+        
+        buildPixels();
+        window.onresize = clearCSS;
+        
+    });
+</script>
+
+<!--script src='js/main.js'></script-->
 </body></html>
