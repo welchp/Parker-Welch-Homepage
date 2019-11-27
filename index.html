@@ -5,178 +5,94 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
 
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="">
 
     <title>welch.parker@gmail.com</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto|Questrial|Raleway' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://js.arcgis.com/4.9/dijit/themes/claro/claro.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Major+Mono+Display|Work+Sans|Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/homepage.css">
 
     <script src="https://kit.fontawesome.com/f0e3873b42.js"></script>
-    
-    <style>
-        * {
-            box-sizing: border-box
-        }
-        
-        html,body {
-            margin:0;
-            padding:0;
-            width:100%;
-            height:100%;
-            font-family: "Questrial", sans-serif;
-        }
-        
-        #main-grid {
-            display:grid;
-            grid-template-rows: 70px auto;
-            align-items: center;
-            height:100%;
-            width:100%;
-        }
-        
-        #main-header {
-            display:flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: black;
-            color:white;
-            height:100%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
-        }
-        
-        #main-content {
-            display:flex;
-            height:100%;
-            width:100%;
-        }
-        
-        #side-nav {
-            display:flex;
-            flex-direction: column;
-            width:300px;
-            padding:6px;
-            background-color: rgba(0,0,0,0.2);
-            color:gray;
-        }
-        
-        .section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:45px;
-            box-shadow: 0 2px 2px rgba(0,0,0,0.05);
-            background-color: white;
-            border-radius:6px;
-            margin:10px;
-        }
-        
-        .section:hover {
-            display:flex;
-            cursor:pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transform: scale(1.02);
-        }
-        
-        #content-wrapper {
-            display:grid;
-            grid-template-rows: 1fr 3fr;
-            margin:auto;
-            height:100%;
-            width:100%;
-            grid-gap:10px;
-        }
-        
-        #section-header {
-            padding:10px;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0,0,0,0.8);
-            color:gray;
-            width:100%;
-            height:100%;
-            font-size:38px;
-            font-weight:100;
-        }
-        
-        #projects {
-            display:grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-gap:10px;
-            justify-content: center;
-            width:100%;
-            padding:0 10px 10px 10px;
-        }
-        
-        .project-card {
-            display: flex;
-            margin:auto;
-            justify-content: center;
-            align-items: center;
-            height:100%;
-            width:100%;
-            border: 1px solid rgba(0,0,0,0.2);
-            border-radius: 4px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            font-size: 80px;
-            font-weight: 800;
-            color:rgba(0,0,0,0.2);
-            flex-wrap: wrap;
-        }
-        
-        .pixel {
-            width:4px;
-            height:4px;
-        }
-        
-    </style>
-
-
 
 </head>
 
 <body>
     <div id="main-grid">
-        <header id="main-header">
-            <h1>parkerwelch.info</h1>
+        <header id="secondary-header">
+       		<a class="secondary-header-link" href="#"><p>Resume</p></a>
+       		<a class="secondary-header-link" href="#"><p>Portfolio</p></a>
+			<a class="secondary-header-link" href="#"><p>Tutorials</p></a>
+       		<a class="secondary-header-link" href="blog/index.html"><p>Blog</p></a>
         </header>
         <div id="main-content">
-            <div id="side-nav">
-                <div class="section">Section 1</div>
-                <div class="section">Section 2</div>
-                <div class="section">Section 3</div>
-                <div class="section">Section 4</div>
-                <div class="section">Section 5</div>
-            </div>
             <div id="content-wrapper">
-                <header id="section-header">
-                    <h4>Projects</h4>
-                </header>
-                <div id="projects">
-                    <div class="project-card">pixels</div>
-                    <div class="project-card">2</div>
-                    <div class="project-card">3</div>
-                    <div class="project-card">4</div>
-                    <div class="project-card">5</div>
-                    <div class="project-card">6</div>
-                    <div class="project-card">7</div>
-                    <div class="project-card">8</div>
-                    <div class="project-card">9</div>
-                </div>
+            	<div id="contact">
+            		<div id="contact-content">
+            			<h1>+ parker alexander welch</h1>
+						<p>Let's talk about how I can help you.</p>
+            			<hr>
+            			<p>welch.parker@gmail.com
+            			<br>
+            			(714) 797-2910
+            			<br>
+            			395 Sea Ridge Rd. #5
+            			<br>
+            			Aptos, CA 95003
+            			</p>
+            			<button class="contact-btn"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
+					</div>
+            	</div>
+            	<div id="feed">
+            		<div class="item item-right">
+            			<div class="text-area text-area-right">
+							<h1>Experience</h1>
+							<p>University of California, Santa Cruz<br><strong>June 2017 - Present</strong><br><br><ul>
+								<li>Sole manager of all spatial data for large public university</li>
+								<li>Designed and implemented standards and procedures</li>
+							</ul></p>
+							<button class="contact-btn contact-btn-light"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
+           				</div>
+           				<div class="picture-area">
+           					<div class="bg"></div>
+           				</div>
+					</div>
+            		<div class="item item-left">
+            			<div class="text-area text-area-left">
+							<h1>Rethink your assumptions.</h1>
+							<p>Without the audacity to challenge the status quo, there can be no progress. Let's reimagine reality.</p>
+							<button class="contact-btn"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
+           				</div>
+           				<div class="picture-area">
+           					<div class="bg"></div>
+           				</div>         			
+            		</div>
+            		<div class="item item-right">
+            			<div class="text-area text-area-right">
+							<h1>Solutions for your business.</h1>
+							<p>Designing and implementing cost-effective integrations, saving you money and unifying your team around a common suite of custom tools.</p>
+							<button class="contact-btn contact-btn-light"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
+           				</div>
+           				<div class="picture-area">
+           					<div class="bg"></div>
+           				</div>
+            		</div>
+            		<div class="item">
+            			<div class="text-area text-area-left">
+							<h1>Solutions for your business.</h1>
+							<p>Designing and implementing cost-effective integrations, saving you money and unifying your team around a common suite of custom tools.</p>
+							<button class="contact-btn"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
+           				</div>
+           				<div class="picture-area">
+           					<div class="bg"></div>
+           				</div>
+            		</div>
+            	</div>
             </div>
         </div>
     </div>
 
+<script src="js/main.js"></script>
 
-<!--script src='js/main.js'></script-->
 </body></html>
