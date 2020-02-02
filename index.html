@@ -12,6 +12,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Major+Mono+Display|Work+Sans|Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/homepage.css">
 
     <script src="https://kit.fontawesome.com/f0e3873b42.js"></script>
@@ -20,7 +22,7 @@
 
 <body>
     <div id="main-grid">
-        <header id="secondary-header">
+        <header style="display:none" id="secondary-header">
        		<a class="secondary-header-link" href="#"><p>Resume</p></a>
        		<a class="secondary-header-link" href="#"><p>Portfolio</p></a>
 			<a class="secondary-header-link" href="#"><p>Tutorials</p></a>
@@ -28,44 +30,26 @@
         </header>
         <div id="main-content">
             <div id="content-wrapper">
-            	<div id="contact">
-            		<div id="contact-content">
-            			<h1>+ parker alexander welch</h1>
-						<p>Let's talk about how I can help you.</p>
-            			<hr>
-            			<p><a href="mailto:welch.parker@gmail.com">welch.parker@gmail.com</a>
-            			<br>
-            			(714) 797-2910
-            			<br>
-            			395 Sea Ridge Rd. #5
-            			<br>
-            			Aptos, CA 95003
-            			</p>
-            			<button class="contact-btn"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
-           			</div>
-           			<div id="headshot"></div>
-            	</div>
+            	
             	<div id="feed">
-            		<div class="item item-right">
-            			<div class="text-area text-area-right">
-							<h1>Experience</h1>
-							<p>University of California, Santa Cruz
-							<br>
-							<strong>June 2017 - Present</strong>
-							<br><br>
-							</p>
-							<ul>
-								<li>Sole manager of all spatial data for large public university</li>
-								<li>Designed and implemented standards and procedures</li>
-							</ul>
-							<button class="contact-btn contact-btn-light"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
-           				</div>
-           				<div class="picture-area">
-           					<iframe id="map"
-								title="UCSC Interactive Map"
-								src="https://maps.ucsc.edu">
-							</iframe>
-           				</div>
+					<div id="contact">
+						<div id="contact-content">
+							<img src="images/undraw_content_structure_79gj.svg" alt="I'm an action man with and action plan." width="50%">
+							<div class="text-area text-area-right">
+								<h1>Experience</h1>
+								<p>University of California, Santa Cruz
+								<br>
+								<strong>June 2017 - Present</strong>
+								<br><br>
+								</p>
+								<ul>
+									<li>Sole manager of all spatial data for large public university</li>
+									<li>Designed and implemented standards and procedures</li>
+								</ul>
+								<button class="contact-btn"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
+							   </div>
+							
+						   </div>
 					</div>
             		<div class="item item-left">
             			<div class="text-area text-area-left">
@@ -96,10 +80,27 @@
            				<div class="picture-area">
            					<div class="bg"></div>
            				</div>
-            		</div>
+					</div>
+					<div class="item item-right">
+						<div id="details">
+								<h1 id="nametag" style="display: block;"><span class="fade">P</span><span class="fade">A</span><span class="fade">R</span><span class="fade">K</span><span class="fade">E</span><span class="fade">R</span><span class="fade">&nbsp;</span><span class="fade">W</span><span class="fade">E</span><span class="fade">L</span><span class="fade">C</span><span class="fade">H</span></h1>
+								<hr>
+								<div id="icon-nav">
+									<a href=""><i class="far fa-file-alt" aria-hidden="true"></i></a>
+									<a href=""><i class="far fa-copy" aria-hidden="true"></i></a>
+									<a href=""><i class="far fa-file-alt" aria-hidden="true"></i></a>
+								</div>
+								<div id="icons">
+									<a href=""><i class="fas fa-blog" aria-hidden="true"></i></a>
+									<a href=""><i class="fab fa-github" aria-hidden="true"></i></a>
+									<a href=""><i class="fab fa-youtube" aria-hidden="true"></i></a>
+								</div>
+								<button class="contact-btn"><a href="mailto:welch.parker@gmail.com">Learn More</a></button>
+						</div>
+					</div>
             	</div>
             </div>
         </div>
     </div>
-
+	<script src="js/main.js"></script>
 </body></html>

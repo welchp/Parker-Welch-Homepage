@@ -37,7 +37,7 @@ function getEven(number) {
 };
 
 var bod = document.getElementsByTagName("BODY")[0];
-var box = document.getElementById("main-content")
+var box = document.getElementById("main-grid")
 let i = Math.floor(Math.random() * 10)
 var n = document.createElement("h1")
 n.textContent = i
