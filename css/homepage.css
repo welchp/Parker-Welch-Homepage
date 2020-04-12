@@ -70,7 +70,6 @@ a {
 	border:none;
 	text-decoration:none;
 	font-weight: 500;
-	font-family: Bebas Neue, cursive;
 }
 
 .contact-btn {
@@ -145,11 +144,10 @@ a {
 	height:45px;
 	background-color: #D0CDE1;
 	background-color: whit;
-	border-bottom:1px solid rgba(0,0,0,0.1);
 	box-shadow: 0 0 12px rgba(0,0,0,0.1);
 	position: -webkit-sticky;
 	position: sticky;
-	top:0;
+	top:4px;
 	z-index: 999;
 }
 
@@ -160,9 +158,10 @@ a {
 .secondary-header-link {
 	text-decoration: none;
 	color:#3F3D56;
+	color:#5A728C;
+	color:white;
 	font-weight: "normal";
 	margin:3px 0;
-	font-family:Bebas Neue, cursive;
 	transition: .2s;
 }
 
